@@ -3,7 +3,8 @@
 This repo consists of snippet functions that I used to make life easier while working in data science projects.
 
 
-<code>categorical_cols = ['a', 'b', 'c', 'd'] 
+```
+categorical_cols = ['a', 'b', 'c', 'd'] 
 
 from sklearn.preprocessing import LabelEncoder
 # instantiate labelencoder object
@@ -25,4 +26,5 @@ data_hot_encoded = pd.DataFrame(array_hot_encoded, index=data.index)
 data_other_cols = data.drop(columns=categorical_cols)
 
 #Concatenate the two dataframes : 
-data_out = pd.concat([data_hot_encoded, data_other_cols], axis=1)</code>
+data_out = pd.concat([data_hot_encoded, data_other_cols], axis=1)
+```
