@@ -48,3 +48,14 @@ def find_outliers(data):
     print("\nOutliers are being added to list. Please wait!")
     time.sleep(3)
     print("\nOutliers in the dataset is", outliers)
+    
+    # Visualizing Outliers
+
+def plot_outliers(data):
+    # Paint red outlier areas on the boxplot
+    f, ax = plt.subplots(figsize=(22,5))
+    ax.ticklabel_format(style='plain', axis='both')
+    
+    outliers = sns.boxplot(ax=ax, x=data, palette="Paired")
+    plt.axvspan(xmin = low_lim, xmax = data.min(), alpha=0.3, color='red')
+    plt.axvspan(xmin = up_lim, xmax = data.max(), alpha=0.3, color='red')
